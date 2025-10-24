@@ -1,5 +1,8 @@
 body {
     text-align:center;
+    font-family: "Dongle";
+    font-weight: 400;
+    font-size: 2em
 }
 
 .dongle-light {
@@ -29,3 +32,18 @@ body {
   font-variation-settings:
     "wdth" 100;
 }
+
+header {
+  background-color: #93A5CA;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5em;
+    background-color: #93A5CA;
+}
+
+.container-fluid {}
