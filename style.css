@@ -38,14 +38,74 @@ header {
 }
 
 .container {
+  text-align: center;
   width: 100%;
   max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
-    padding: 5em;
+    padding: 2em;
+    padding-top: 5em;
+    padding-bottom: 5em;
     background-color: #93A5CA;
 }
 
-h2{
-  font-size: 3em;
+
+/* Make main background blue but individual sections transparent */
+main {
+  background-color: #93A5CA;
 }
+
+.container {
+  background-color: transparent;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+/* Resize thumbnails smoothly */
+.img-thumbnail {
+  max-width: 70%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+/* Improve spacing for section headings */
+h2 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+section:nth-of-type(even),
+.container:nth-of-type(even) {
+  background-color: #A7B6D6; /* slightly lighter blue */
+}
+
+section:nth-of-type(odd),
+.container:nth-of-type(odd) {
+  background-color: #93A5CA;
+}
+
+.container {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-radius: 1rem;
+}
+
+img {
+  border-radius: 1rem;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.accordion-button:hover {
+  background-color: #b7c5e2;
+  transition: background-color 0.3s ease;
+}
+
+.img-thumbnail:hover {
+  transform: scale(1.03);
+  transition: transform 0.3s ease;
+}
+
