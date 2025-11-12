@@ -17,32 +17,31 @@
 <body>
 
 <header>
-<nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3 fixed-top">
-  <a class="navbar-brand" href="#"><h1>About Me</h1></a>
-  <ul class="nav nav-pills">
-    <li class="nav-item">
-      <a class="nav-link" href="#scrollspyHeading1">My Bio</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#scrollspyHeading2">Skills</a>
-    </li>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#scrollspyHeading3"><h2>Projects</h2></a></li>
-        <li><a class="dropdown-item" href="#scrollspyHeading4"><h2>Contact</h2></a></li>
-        <li><hr class="dropdown-divider"></li>
-        
-      </ul>
-    </li>
-  </ul>
-</nav>
+
+<nav id="navbar" class="navbar navbar-expand-lg bg-body-tertiary px-3 mb-3 my-nav fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><h1>About Me</h1></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="#scrollspyHeading1">My Bio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#scrollspyHeading2">Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="#scrollspyHeading3">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#scrollspyHeading4">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
 <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
   <div class="container-fluid">
   <h1 class="Dongle">Justin Castillo</h1>
   </div>
   </div>
   </header>
+
   <main>
 
 
@@ -170,7 +169,7 @@
   <div class="row g-4">
 
     <!-- Project Card 1 -->
-    <div class="col-md-4 d-flex align-items-stretch">
+    <div class="col-lg-4 d-flex align-items-stretch">
       <div class="card project-card w-100">
         <img src="https://gggp.org/wp-content/uploads/2023/11/hero_gettinghere.jpg" 
              class="card-img-top" alt="Golden Gate Park project image">
@@ -179,13 +178,13 @@
           <p class="card-text flex-grow-1">
             A website that provides a list of stunning and interesting places across Golden Gate Park.
           </p>
-          <a href="#" class="btn btn-custom mt-auto">Open</a>
+          <a href="#" target="_blank" class="btn btn-custom mt-auto">Open</a>
         </div>
       </div>
     </div>
 
     <!-- Project Card 2 -->
-    <div class="col-md-4 d-flex align-items-stretch">
+    <div class="col-lg-4 d-flex align-items-stretch">
       <div class="card project-card w-100">
         <img src="https://seecontrol.com/wp-content/uploads/2021/08/what-is-iot.jpeg" 
              class="card-img-top" alt="IoT devices project image">
@@ -194,13 +193,13 @@
           <p class="card-text flex-grow-1">
             My final IoT project, showcasing circuit design and device connectivity.
           </p>
-          <a href="#" class="btn btn-custom mt-auto">Open</a>
+          <a href="#" target="_blank" class="btn btn-custom mt-auto">Open</a>
         </div>
       </div>
     </div>
 
     <!-- Project Card 3 -->
-    <div class="col-md-4 d-flex align-items-stretch">
+    <div class="col-lg-4 d-flex align-items-stretch">
       <div class="card project-card w-100">
         <img src="https://cdn.sanity.io/images/mz2hls6g/production/bc1c6ad069d2d26a8606816f0ed4a7c9c12c02b7-1200x801.jpg?w=1600&q=75&fit=clip&auto=format" 
              class="card-img-top" alt="Resume project image">
@@ -209,7 +208,7 @@
           <p class="card-text flex-grow-1">
             A digital copy of my resume highlighting education, skills, and experience.
           </p>
-          <a href="https://docs.google.com/document/d/1glH3qt3Uh10JwHBgyn87LxX8pbFhLq807FmMKCV1CIU/edit?usp=sharing" 
+          <a href="justin_resume.pdf" target="_blank"
              class="btn btn-custom mt-auto">Open</a>
         </div>
       </div>
