@@ -1,16 +1,112 @@
+/* === CSS for About Justin Castillo === */
+
+/* === General Tag Styles === */
 html {
-  scroll-padding-top: 100px; /* Adjust to your navbar height */
-  scroll-behavior: smooth;   /* Optional: adds smooth scrolling */
+  scroll-padding-top: 100px; /* keeps section headers visible under navbar */
+  scroll-behavior: smooth;
 }
 
 body {
-    padding-top: 120px;
-    text-align:center;
-    font-family: "Dongle";
-    font-weight: 400;
-    font-size: 2em
+  padding-top: 120px; /* offset for fixed navbar */
+  text-align: center;
+  font-family: "Dongle", sans-serif;
+  font-weight: 400;
+  /* 
+    Only the "root" font size should be set in px 
+    The rest should be set in rem or em
+  */
+  /* font-size: 2em; */
+  font-size: 32px;
+  margin: 0;
+  background-color: #93a5ca;
 }
 
+/* Make main background blue but individual sections transparent */
+main {
+  background-color: #93a5ca;
+}
+
+header {
+  background-color: #93a5ca;
+}
+
+p {
+  font-size: 1em;
+}
+
+h1 {
+  font-size: 3.5em;
+  font-weight: 700;
+}
+
+/* Improve spacing for section headings */
+h2 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+header {
+  background-color: #93a5ca;
+  background: linear-gradient(135deg, #a7b6d6 0%, #93a5ca 100%);
+  color: black;
+  text-align: center;
+  /* padding: 6rem 2rem 3rem; */
+  padding: 5rem 1rem 3rem;
+}
+
+header h1 {
+  /* font-size: clamp(2.5rem, 6vw, 5rem);  */
+  font-size: clamp(2.5rem, 6vw, 6rem);
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  color: #1a1a1a;
+  margin-top: 0.2rem;
+}
+
+header {
+}
+
+img {
+  border-radius: 1rem;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2b2b2b;
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #93a5ca;
+  font-size: 1.2em;
+}
+
+section:nth-of-type(even),
+.container:nth-of-type(even) {
+  background-color: #a7b6d6; /* slightly lighter blue */
+}
+
+section:nth-of-type(odd),
+.container:nth-of-type(odd) {
+  background-color: #93a5ca;
+}
+
+/* unused
 .dongle-light {
   font-family: "Dongle", sans-serif;
   font-weight: 300;
@@ -29,101 +125,45 @@ body {
   font-style: normal;
 }
 
-
 .encode-sans-sc-uniquifier {
   font-family: "Encode Sans SC", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+  font-variation-settings: "wdth" 100;
 }
+*/
 
-header {
-  background-color: #93A5CA;
-}
+/* ========== Bootstrap overrides ========== */
 
 .container {
   text-align: center;
+  /* duplicate/overridden rules */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  /* padding: 2em; */
+  /* padding-top: 5em; */
+  /* padding-bottom: 5em; */
+  /* background-color: #93a5ca; */
+  /* background-color: transparent; */
+  /* padding-top: 3em; */
+  /* padding-bottom: 3em; */
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+
   width: 100%;
   max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 2em;
-    padding-top: 5em;
-    padding-bottom: 5em;
-    background-color: #93A5CA;
-}
-
-
-/* Make main background blue but individual sections transparent */
-main {
-  background-color: #93A5CA;
-}
-
-.container {
+  margin: auto;
+  padding: 3em 1em;
+  text-align: center;
   background-color: transparent;
-  padding-top: 3em;
-  padding-bottom: 3em;
-}
-
-/* Resize thumbnails smoothly */
-.img-thumbnail {
-  max-width: 70%;
-  height: auto;
   border-radius: 1rem;
-}
-
-p {
-  font-size: 1em;
-}
-h1 {
-  font-size: 3.5em;
-  font-weight: 700;
-}
-/* Improve spacing for section headings */
-h2 {
-  font-size: 3em;
-  margin-bottom: 0.5em;
-}
-
-section:nth-of-type(even),
-.container:nth-of-type(even) {
-  background-color: #A7B6D6; /* slightly lighter blue */
-}
-
-section:nth-of-type(odd),
-.container:nth-of-type(odd) {
-  background-color: #93A5CA;
-}
-
-.container {
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  border-radius: 1rem;
-}
-
-img {
-  border-radius: 1rem;
-}
-
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.accordion-button:hover {
-  background-color: #b7c5e2;
-  transition: background-color 0.3s ease;
-}
-
-.img-thumbnail:hover {
-  transform: scale(1.03);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
-  background-color: #A7B6D6 !important;
+  background-color: #a7b6d6 !important;
 }
 
 .nav-link {
@@ -138,41 +178,137 @@ nav {
 .card:hover {
   transform: scale(1.03);
   transition: all 0.3s ease;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 768px) {
-  h2 {
-    font-size: 1.8em;
-  }
-  .img-thumbnail {
-    max-width: 90%;
-  }
-  p {
-    font-size: 1.1em;
-  }
-}
-
-a {
-  color: #000;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #2b2b2b;
+.nav-link:hover {
+  color: #333 !important;
   text-decoration: underline;
 }
 
-footer {
-  background-color: #93A5CA;
-  font-size: 1.2em;
+/* Navbar responsiveness */
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+/* Navbar links */
+.navbar .nav-link {
+  /* color: #000 !important; */
+  /* font-size: 1.5rem; */
+  color: black !important;
+  font-size: 2.5rem !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.accordion-button:hover {
+  background-color: #b7c5e2;
+  transition: background-color 0.3s ease;
+}
+
+.accordion {
+  border-radius: 1rem;
+  background-color: #f8f9fc;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Individual Accordion Items */
+.accordion-item {
+  border: none;
+  background-color: transparent;
+}
+
+/* When hovered or active */
+.accordion-button:hover {
+  background-color: #bfcbe8;
+  color: #12224f;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #a7b6d6;
+  color: #1e2a5e;
+  box-shadow: inset 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Accordion Body */
+.accordion-body {
+  background-color: #f8f9fc;
+  font-size: 1.1em;
+  color: #2c2c2c;
+  border-top: 1px solid #c8d1eb;
+  text-align: left;
+  padding: 1.5em;
+}
+
+/* Add some spacing and rounded edges to the whole section */
+.container:has(#scrollspyHeading2) {
+  background-color: #a7b6d6;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 4em 2em;
+}
+
+/* ========== End of Bootstrap overrides ========== */
+
+/* === IMAGES === */
+
+/* Resize thumbnails smoothly */
+.img-thumbnail {
+  max-width: 70%;
+  max-width: 80%;
+  height: auto;
+  border-radius: 1rem;
+  transition: transform 0.3s ease;
+}
+.img-thumbnail {
+  height: auto;
+  border-radius: 1rem;
+  max-width: 80%;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.img-thumbnail:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.bio figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bio .img-container {
+  width: 80%;
+  height: 80%;
+  margin: 0;
+  padding: 0;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #dee2e6;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.bio img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.bio .img-container:hover,
+.bio .img-container:hover {
+  /* transform: scale(1.03); */
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 
 /* === Projects Section Styling === */
 .project-section {
-  background-color: #A7B6D6;
+  background-color: #a7b6d6;
   border-radius: 1rem;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   padding: 4em 2em;
 }
 
@@ -198,7 +334,7 @@ footer {
 /* Card Text Styling */
 .project-card .card-title {
   font-size: 1.8em;
-  color: #1E2A5E;
+  color: #1e2a5e;
 }
 
 .project-card .card-text {
@@ -220,74 +356,11 @@ footer {
   transform: scale(1.05);
 }
 
-/* Responsive Tweaks */
-@media (max-width: 768px) {
-  .project-card .card-img-top {
-    height: 250px;
-  }
-}
-
 /* === Skills Section Styling === */
 #scrollspyHeading2 {
   color: black;
   font-size: 3em;
   margin-bottom: 1rem;
-}
-
-.accordion {
-  border-radius: 1rem;
-  background-color: #f8f9fc;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-
-/* Individual Accordion Items */
-.accordion-item {
-  border: none;
-  background-color: transparent;
-}
-
-
-/* When hovered or active */
-.accordion-button:hover {
-  background-color: #bfcbe8;
-  color: #12224f;
-}
-
-.accordion-button:not(.collapsed) {
-  background-color: #A7B6D6;
-  color: #1E2A5E;
-  box-shadow: inset 0 -1px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Accordion Body */
-.accordion-body {
-  background-color: #f8f9fc;
-  font-size: 1.1em;
-  color: #2c2c2c;
-  border-top: 1px solid #c8d1eb;
-  text-align: left;
-  padding: 1.5em;
-}
-
-/* Add some spacing and rounded edges to the whole section */
-.container:has(#scrollspyHeading2) {
-  background-color: #A7B6D6;
-  border-radius: 1rem;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  padding: 4em 2em;
-}
-
-/* Images beside the accordion */
-.img-thumbnail {
-  max-width: 80%;
-  border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.img-thumbnail:hover {
-  transform: scale(1.05);
 }
 
 /* Default navbar style */
@@ -302,24 +375,8 @@ footer {
 /* When scrolled */
 #navbar.scrolled {
   padding: 0.5em 2em;
-  background-color: #93A5CA; /* your header color */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-/* === UNIVERSAL SETTINGS === */
-html {
-  scroll-padding-top: 100px; /* keeps section headers visible under navbar */
-  scroll-behavior: smooth;
-}
-
-body {
-  padding-top: 120px; /* offset for fixed navbar */
-  text-align: center;
-  font-family: "Dongle", sans-serif;
-  font-weight: 400;
-  font-size: 2em;
-  margin: 0;
-  background-color: #93A5CA;
+  background-color: #93a5ca; /* your header color */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* === NAVBAR (Fixed and Responsive) === */
@@ -338,73 +395,63 @@ body {
 
 /* Navbar appearance when scrolled */
 #navbar.scrolled {
-  background-color: #93A5CA;
+  background-color: #93a5ca;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   padding: 0.7rem 2rem;
 }
 
-/* Navbar links */
-.nav-link {
-  color: #000 !important;
-  font-size: 1.5rem;
-  font-weight: 500;
+/* Extra styling changes */
+
+/* === Navbar & Header Blended Look === */
+#navbar {
+  background: linear-gradient(135deg, #a7b6d6 0%, #93a5ca 100%);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
-.nav-link:hover {
-  color: #333 !important;
-  text-decoration: underline;
-}
-
-/* Navbar responsiveness */
-.navbar-toggler {
-  border: none;
-  outline: none;
-}
-
-/* === HEADER === */
-header {
-  background-color: #93A5CA;
-  text-align: center;
-  padding: 6rem 2rem 3rem;
-}
-
-header h1 {
-  font-size: clamp(2.5rem, 6vw, 5rem); /* responsive scaling */
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-
-header p {
-  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-  color: #1a1a1a;
-  margin-top: 0.2rem;
-}
-
-/* === MAIN CONTAINER === */
-.container {
-  width: 100%;
-  max-width: 1440px;
-  margin: auto;
-  padding: 3em 1em;
-  text-align: center;
-  background-color: transparent;
-  border-radius: 1rem;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-/* === IMAGES === */
-.img-thumbnail {
-  max-width: 80%;
-  height: auto;
-  border-radius: 1rem;
-  transition: transform 0.3s ease;
-}
-
-.img-thumbnail:hover {
-  transform: scale(1.05);
+/* When scrolled down */
+#navbar.scrolled {
+  background: linear-gradient(135deg, #93a5ca 0%, #7e90b8 100%);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* === RESPONSIVENESS === */
+
+@media (max-width: 576px) {
+  header {
+    padding: 4rem 1rem 2rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1.1rem;
+  }
+
+  .navbar-brand h1 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.8em;
+  }
+  .img-thumbnail {
+    max-width: 90%;
+  }
+  p {
+    font-size: 1.1em;
+  }
+  .project-card .card-img-top {
+    height: 250px;
+  }
+}
+
 @media (max-width: 992px) {
   body {
     padding-top: 100px;
@@ -431,24 +478,6 @@ header p {
   }
 }
 
-@media (max-width: 576px) {
-  header {
-    padding: 4rem 1rem 2rem;
-  }
-
-  header h1 {
-    font-size: 2rem;
-  }
-
-  header p {
-    font-size: 1.1rem;
-  }
-
-  .navbar-brand h1 {
-    font-size: 1.4rem;
-  }
-}
-
 @media (min-width: 1400px) {
   header {
     padding: 8rem 2rem 4rem;
@@ -465,43 +494,4 @@ header p {
   .nav-link {
     font-size: 1.5rem;
   }
-}
-
-/* Extra styling changes */
-
-/* === Navbar & Header Blended Look === */
-#navbar {
-  background: linear-gradient(135deg, #A7B6D6 0%, #93A5CA 100%);
-  backdrop-filter: blur(10px);
-  color: #fff;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
-}
-
-/* When scrolled down */
-#navbar.scrolled {
-  background: linear-gradient(135deg, #93A5CA 0%, #7E90B8 100%);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-}
-
-/* Navbar links */
-.navbar .nav-link {
-  color: black !important;
-  font-size: 2.5rem !important;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-/* Header */
-header {
-  background: linear-gradient(135deg, #A7B6D6 0%, #93A5CA 100%);
-  color: black;
-  text-align: center;
-  padding: 5rem 1rem 3rem;
-}
-
-header h1 {
-  font-size: clamp(2.5rem, 6vw, 6rem);
-  font-weight: 700;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.25);
 }
